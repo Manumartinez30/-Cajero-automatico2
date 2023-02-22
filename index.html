@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <title>SOUTH BANK| ATM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="cajero">
+        
+        <section class="imgBanco">
+            <img src="ims/euro.png" class="imgLogo" alt="" />
+        </section>
+        <section id="bienvenida" class="card">
+            <h2>SOUTH BANK </h2>
+            <button id="bienvenida" onclick="ingresoUsuario()">ENTER</button>
+        </section>
+       
+        <!-- INGRESO CAJERO -->
+        <section id="loginUsuario" class="card">
+            <h3>SELECT USER</h3>
+            <div class="botonesOpciones">
+                <button onclick="mali ()">Mali</button>
+                <button onclick="gera ()">Gera</button>
+                <button onclick="maui ()">Maui</button>
+            </div>
+            <img src="ims/peso verde.png" class="arrowButton" id="arrowLogin" onclick="backArrowLogin ()" alt="">
+        </section>
+       
+        <!-- CLAVE USUARIO-->
+        <section id="claveUsuario" class="card">
+            <h3> ENTER PASSWORD</h3>
+            <div class="clave">
+                <div class="claveVertical">
+                    <input type="password" id="claveIngresada" placeholder="enter your password" />
+                    <span class="mensajeError" id="errorClave"></span>
+                </div>
+                <button onclick="validacionClave ()">ENTER</button>
+            </div>
+            <img src="ims/peso verde.png" class="arrowButton" id="arrowClave" onclick="backArrowClave ()" alt="">
+        </section>
+       
+        <!-- OPCIONES CAJERO -->
+        <section id="opcionesCajero" class="card">
+            <h3>¿WHAT DO YO WHANT DO?</h3>
+            <div class="botonesOpciones">
+                <button onclick="verSaldo()"> Balance</button>
+                <button onclick="ingresarSaldo ()">Deposit</button>
+                <button onclick="retirarSaldo ()">Withdraw</button>
+              
+                <!-- <button>Cambiar contraseña</button> -->
+            </div>
+            <img src="ims/peso verde.png" class="arrowButton" id="arrowOpciones" onclick="backArrowOpciones()" alt="">
+        </section>
+       
+        <!-- OPCIONES CAJERO // VER SALDO -->
+        <section id="verSaldo" class="card">
+            <h3>CURRENT BALANCE:</h3>
+            <span id="saldoCliente" class="saldoMostrar"></span>
+            <img src="ims/peso verde.png" class="arrowButton" id="arrowSaldo" onclick="backArrowSaldo()" alt="">
+        </section>
+       
+        <!-- OPCIONES CAJERO // AGREGAR SALDO -->
+        <section id="agregarSaldo" class="card">
+            <h3>¿Amount to enter ?</h3>
+            <div class="saldoDiferente inputGlobal">
+                <input type="number" id="saldoIngresado" placeholder="Enter a different amount " />
+                <span class="mensajeError" id="alertaCupo"></span>
+            </div>
+            <button onclick="inputSaldo ()">Enter balance</button>
+            <img src="ims/peso verde.png" class="arrowButton" id="arrowAgregar" onclick="backArrowAgregar()" alt="">
+        </section>
+       
+        <!-- OPCIONES CAJERO // RETIRAR SALDO -->
+        <section id="retirarSaldo" class="card">
+            <h3>¿Amount to withdraw?</h3>
+            <div class="saldoDiferente inputGlobal">
+                <input type="number" id="saldoIngresadoRetirar" placeholder="Enter amount different" />
+                <span class="mensajeError" id="alertaCupoRetiro"></span>
+            </div>
+            <button onclick="inputSaldoRetiro ()">withdraw balance? </button>
+            <img src="ims/peso verde.png" class="arrowButton" id="arrowRetirar" onclick="backArrowRetirar()" alt="">
+        </section>
+       
+        <!--  VER SALDO INGRESADO  Y TOTAL -->
+        <section id="saldoTotal" class="card">
+            <h3 id="tituloSaldo"></h3>
+            <span id="saldoIngresadoCliente" class="saldoMostrar">$</span>
+            <h3>Your total balance is:</h3>
+            <span id="saldoTotalCliente" class="saldoMostrar"></span>
+            <img src="ims/peso verde.png" class="arrowButton" id="arrowVerSaldo" onclick="backArrowVerSaldo()" alt="">
+        </section>
+    </section>
+    <script src="./index.js"></script>
+</body>
+
+</html>

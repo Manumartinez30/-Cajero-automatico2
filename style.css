@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Font-size: clamp();*/
+
+body {
+    background-image: url(./assets/background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
+    display: grid;
+    place-items: center;
+}
+
+h2 {
+        font-family: 'Lilita One', cursive;
+    color: rgb(130, 3, 146);
+    text-align: center;
+    font-size: 90px;
+    font-weight: 900;
+    margin-block: 30px;
+}
+
+h3 {
+    font-family: 'Abril Fatface', cursive;
+    color:rgb(130, 3, 146);
+    text-align: center;
+    font-size: 70px;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-block: 5px;
+}
+
+/* --- BUTTON --- */
+
+button {
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(219, 212, 212, 0.3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    margin: 5px 5px;
+    font-weight: 600;
+    transition: ease .2s;
+}
+
+button:hover {
+    border-radius: 50px;
+    background:#a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    color: rgb(9, 228, 24);
+    border: 0px solid rgb(0, 0, 0);
+    transform: scale(1.5);
+}
+
+/* --- INPUT --- */
+
+input {
+    border: none;
+    height: 45px;
+    width: 250px;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 4px #000;
+}
+
+input:focus::placeholder {
+    visibility: hidden;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* --- CAJERO GLOBAL --- */
+
+.cajero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    width: 70%;
+    max-width: 650px;
+
+    max-height: 600px;
+    margin: 40px;
+    padding: 20px;
+    background: rgba(6, 227, 6, 0.65);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(119, 22, 15, 0.35);
+    box-shadow: 0 0 24px rgba(187, 7, 7, 0.8);
+}
+
+.imgBanco {
+    border-radius: 50px;
+    display: flex;
+    align-items: flex-start;
+    height: 10vh;
+}
+
+.imgLogo {
+    width: 100%;
+    max-width: 450px;
+    margin: 140px 0;
+}
+
+.arrowButton {
+    cursor: pointer;
+    width: 40px;
+    background: linear-gradient(125deg, rgb(141, 23, 41) 0%, rgb(50, 134, 60) 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(45, 124, 29, 0.8);
+    transition: ease .2s;
+    margin: 20px;
+}
+
+.arrowButton:hover {
+    transform: scale(1.9);
+}
+
+/* --- SECCIÓNES INTERNAS --- */
+
+.card {
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.botonesOpciones {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inputGlobal {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.saldoMostrar {
+    font-size: clamp(1.2rem, 7vh, 35rem);
+}
+
+.clave {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.claveVertical {
+    display: flex;
+    flex-direction: column;
+}
+
+#loginUsuario,
+#claveUsuario,
+#opcionesCajero,
+#verSaldo,
+#agregarSaldo,
+#retirarSaldo,
+#saldoTotal,
+#cambiarContraseña {
+    display: none;
+}
+
+.mensajeError {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color:red;
+    width: 250px;
+    text-align: center;
+    margin-block: 5px;
+}
+
+
+/* #saldoCliente, #saldoIngresadoCliente, #saldoTotalCliente {
+    font-size: 22px;
+    margin: 15px 0;
+} */
